@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ProfileNavigationIcon: ViewModifier {
+    @Environment (\.colorScheme) var colorScheme
+    
     func body(content: Content) -> some View {
         content
             .scaledToFit()
             .frame(width: 20, height: 20)
-            .foregroundColor(.black)
+            .foregroundColor(colorScheme == .dark ? .white : .black)
     }
 }

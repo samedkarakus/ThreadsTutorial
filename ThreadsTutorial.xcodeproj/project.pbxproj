@@ -22,6 +22,7 @@
 		9467EB7D2BAA2CA200B2D70D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467EB7C2BAA2CA200B2D70D /* ContentView.swift */; };
 		9467EB7F2BAA2CA300B2D70D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9467EB7E2BAA2CA300B2D70D /* Assets.xcassets */; };
 		9467EB822BAA2CA300B2D70D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9467EB812BAA2CA300B2D70D /* Preview Assets.xcassets */; };
+		94E2352E2BB0CD7F00790451 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2352D2BB0CD7F00790451 /* LoginViewModel.swift */; };
 		94F171EF2BAA3110007EB57C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F171EE2BAA3110007EB57C /* LoginView.swift */; };
 		94F171F12BAA3FCD007EB57C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F171F02BAA3FCD007EB57C /* RegistrationView.swift */; };
 		94F171F62BAAF446007EB57C /* ThreadsTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F171F52BAAF446007EB57C /* ThreadsTextFieldModifier.swift */; };
@@ -51,6 +52,7 @@
 		9467EB7C2BAA2CA200B2D70D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9467EB7E2BAA2CA300B2D70D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9467EB812BAA2CA300B2D70D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		94E2352D2BB0CD7F00790451 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		94F171EE2BAA3110007EB57C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		94F171F02BAA3FCD007EB57C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		94F171F52BAAF446007EB57C /* ThreadsTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifier.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		944D26482BB072970096A580 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				94E2352D2BB0CD7F00790451 /* LoginViewModel.swift */,
 				944D264A2BB072D30096A580 /* RegistrationViewModal.swift */,
 			);
 			path = ViewModel;
@@ -354,8 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				941C9EAC2BAF58E0002375B4 /* EditProfile */,
-				9445D29C2BAEEEE6002AAC2C /* ViewModifiers */,
 				944422AC2BAE1CFC003BB32F /* Model */,
+				9445D29C2BAEEEE6002AAC2C /* ViewModifiers */,
 				94F172112BAB14CB007EB57C /* View */,
 			);
 			path = Profile;
@@ -458,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E2352E2BB0CD7F00790451 /* LoginViewModel.swift in Sources */,
 				94F171EF2BAA3110007EB57C /* LoginView.swift in Sources */,
 				94F172132BAB14D5007EB57C /* ProfileView.swift in Sources */,
 				94F172032BAB13BD007EB57C /* FeedView.swift in Sources */,

@@ -11,9 +11,10 @@ struct ProfileView: View {
     
     @State private var selectedFilter: ProfileThreadFilter = .threads
     @Namespace var animation
+    @Environment (\.colorScheme) var colorScheme
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView (showsIndicators: false) {
                 VStack (alignment: .leading){
                     HStack {
@@ -71,22 +72,24 @@ struct ProfileView: View {
                             Button {
                                 
                             } label: {
-                                Text("Follow")
+                                Text("Edit Profile")
                                     .font(.subheadline)
                                     .fontWeight(.semibold)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(colorScheme == .dark ? .white : .black)
                                     .frame(height: 32)
                                     .frame(minWidth: 0, maxWidth: geometry.size.width / 2)
-                                    .background(.black)
-                                    .cornerRadius(8)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .stroke(Color(.systemGray4), lineWidth: 1)
+                                    )
                             }
                             Button {
                                 
                             } label: {
-                                Text("Mention")
+                                Text("Share Profile")
                                     .font(.subheadline)
                                     .fontWeight(.semibold)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(colorScheme == .dark ? .white : .black)
                                     .frame(height: 32)
                                     .frame(minWidth: 0, maxWidth: geometry.size.width / 2)
                                     .overlay(
@@ -110,7 +113,7 @@ struct ProfileView: View {
                                 
                                     if selectedFilter == filter {
                                         Rectangle()
-                                            .foregroundColor(.black)
+                                            .foregroundColor(colorScheme == .dark ? .white : .black)
                                             .frame(height: 1)
                                             .frame(minWidth: 0, maxWidth: geometry.size.width)
                                             .matchedGeometryEffect(id: "item", in: animation)
@@ -143,19 +146,17 @@ struct ProfileView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    HStack {
-                        Button{
-                            
-                        } label: {
-                            Image(systemName: "chevron.left")
-                            Text("Back")
-                                .font(.subheadline)
-                        }
-                        .foregroundColor(.black)
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "network")
+                            .resizable()
+                            .modifier(ProfileNavigationIcon())
                     }
+
                 }
                 ToolbarItem(placement: .primaryAction){
-                    HStack {
+                    HStack (spacing: 12){
                         Button {
                             
                         } label: {
@@ -166,14 +167,7 @@ struct ProfileView: View {
                         Button {
                             
                         } label: {
-                            Image(systemName: "bell")
-                                .resizable()
-                                .modifier(ProfileNavigationIcon())
-                        }
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "ellipsis.circle")
+                            Image(systemName: "text.alignright")
                                 .resizable()
                                 .modifier(ProfileNavigationIcon())
                         }
