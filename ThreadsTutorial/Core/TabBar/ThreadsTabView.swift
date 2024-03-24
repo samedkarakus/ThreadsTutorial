@@ -28,7 +28,7 @@ struct ThreadsTabView: View {
                 .onAppear{selectedTab = 1}
                 .tag(1)
             
-            CreateThreadView()
+            Text("")
                 .tabItem{
                     Image(systemName: "plus")
                 }
@@ -51,6 +51,11 @@ struct ThreadsTabView: View {
                 .onAppear{selectedTab = 4}
                 .tag(4)
         }
+        .sheet(isPresented: .constant(selectedTab == 2), onDismiss: { //tıkladığında aşağıdan sheet şeklinde çıkar
+            selectedTab = 0
+        }, content: {
+            CreateThreadView()
+        })
         .tint(.black)
     }
 }

@@ -28,7 +28,7 @@ struct EditProfileView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 15, height: 15)
-                                Text("Angeina Diaz (@angelinadiaz)")
+                                Text("Angeina Diaz (@angelina.diaz)")
                             }
                             Divider()
                                 .padding(.vertical)
@@ -61,7 +61,6 @@ struct EditProfileView: View {
                             
                             Text(isPrivateProfile ? "Private Description Example, in a bustling city, a cozy café awaits with ivy-covered walls." : "Public Description Example, in a bustling city, a cozy café awaits with ivy-covered walls in a bustling city, a cozy café.")
                                 .foregroundColor(Color(.systemGray2))
-                                .frame(maxWidth: .infinity)
                         }
                         
                         Toggle("", isOn: $isPrivateProfile)
