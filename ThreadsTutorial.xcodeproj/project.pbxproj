@@ -90,6 +90,13 @@
 			path = EditProfile;
 			sourceTree = "<group>";
 		};
+		942D7FDD2BB0BBF20031A724 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		944422AC2BAE1CFC003BB32F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				94F171EA2BAA2FD2007EB57C /* App */,
+				942D7FDD2BB0BBF20031A724 /* Assets */,
 				94F171E92BAA2FD1007EB57C /* Core */,
 				94F171E82BAA2FD0007EB57C /* Extensions */,
 				94F171E72BAA2FCF007EB57C /* Model */,
