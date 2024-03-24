@@ -11,6 +11,7 @@ struct UserCell: View {
     var body: some View {
         HStack (alignment: .top){
             CircularProfileImageView()
+                .padding(.trailing, 12)
             VStack {
                 HStack (alignment: .top){
                     VStack (alignment: .leading, spacing: 3) {
@@ -51,9 +52,11 @@ struct UserCell: View {
 
                 }
                 Divider()
+                    .background(Color(.systemGray))
             }
         }
         .padding(.horizontal)
+        .padding(.top, 8)
     }
 }
 
