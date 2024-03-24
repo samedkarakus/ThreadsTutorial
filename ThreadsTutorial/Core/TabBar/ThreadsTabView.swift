@@ -10,6 +10,8 @@ import SwiftUI
 struct ThreadsTabView: View {
     
     @State private var selectedTab = 0
+    @State private var showCreateThreadView = false
+    @Environment (\.colorScheme) var colorScheme
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -51,12 +53,15 @@ struct ThreadsTabView: View {
                 .onAppear{selectedTab = 4}
                 .tag(4)
         }
-        .sheet(isPresented: .constant(selectedTab == 2), onDismiss: { //tıkladığında aşağıdan sheet şeklinde çıkar
+        .onChange(of: selectedTab, perform: { newValue in
+            showCreateThreadView = selectedTab == 2
+        })
+        .sheet(isPresented: $showCreateThreadView, onDismiss: { //tıkladığında aşağıdan sheet şeklinde çıkar
             selectedTab = 0
         }, content: {
             CreateThreadView()
         })
-        .tint(.black)
+        .tint(colorScheme == .dark ? .white : .black)
     }
 }
 

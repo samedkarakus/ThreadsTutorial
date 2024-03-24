@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateThreadView: View {
     @Environment (\.colorScheme) var colorScheme
     @State private var caption = ""
+    @Environment (\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
@@ -108,7 +109,7 @@ struct CreateThreadView: View {
             .toolbar {
                 ToolbarItem (placement: .navigationBarLeading) {
                     Button {
-                        
+                        dismiss()
                     } label: {
                         Text("Cancel")
                             .font(.subheadline)

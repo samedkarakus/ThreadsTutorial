@@ -14,6 +14,10 @@ struct CircularProfileImageView: View {
             .scaledToFit()
             .clipShape(Circle())
             .frame(width: 40, height: 40)
+            .overlay {
+                Circle()
+                    .stroke(Color(.systemGray4), lineWidth: 1)
+            }
     }
 }
 

@@ -20,11 +20,11 @@ struct LoginView: View {
                     .resizable()
                     .modifier(ThreadsIconModifier())
                 VStack{
-                    TextField("Enter your email: ", text: $email)
+                    TextField("Enter your email", text: $email)
                         .autocapitalization(.none)
                         .modifier(ThreadsTextFieldModifier())
                     
-                    SecureField("Enter your password: ", text: $password)
+                    SecureField("Enter your password", text: $password)
                         .modifier(ThreadsTextFieldModifier())
                 }
                 
